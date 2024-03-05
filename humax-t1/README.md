@@ -5,7 +5,7 @@ Yet another sketchy baby/"security"/IP camera
 
 [Product page](https://tr.humaxdigital.com/product/t1/)
 
-## Port scanning
+## Port scan
 ![1637446355761](https://github.com/onerc/reverse-engineering/assets/94126150/e059ab1c-2332-43cf-8b99-02cada17ad3c)
 
 Telnet is on by default, credentials are `root:hslwificam`.
