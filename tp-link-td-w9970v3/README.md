@@ -4,14 +4,14 @@
 
 A modem of many faces
 
-## Ambiguity
+## One model name, two products
 
 According to Turk Telekom, this modem has model number W9970v3 (can still be seen in the [manual](https://www.turktelekom.com.tr/Documents/TP-Link-TD-W9970_kullanim_kilavuzu.pdf)), but in reality that model number belongs to [another modem](https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w9970/v3/
 ).
 
 Even the internals look different. Not sure why they chose the name of an existing model.
 
-I guess TP-Link got so many questions/complaints about the _fake_ W9970v3 that they added additional information to the [Turkish page](https://www.tp-link.com/tr/home-networking/dsl-modem-router/td-w9970/v3/) regarding the situation.
+I guess TP-Link received so many questions/complaints about the _fake_ W9970v3 that they added additional information to the [Turkish page](https://www.tp-link.com/tr/home-networking/dsl-modem-router/td-w9970/v3/) regarding the situation.
 
 >Önemli Bilgi ; Türk Telekom tarafından internet başvurusu dahilinde verilen TD-W9970V3 model ürün ile Web sitemizde yer alan TD-W9970 V3 modelleri birbirlerinden farklıdır. Türk Telekom tarafından verilen TD-W9970V3 modelin yazılım ve servis hizmetleri Sentim Bilişim firması tarafından sağlanmaktadır. İlgili firmaya http://www.sentim.com.tr/iletisim-destek/modem-destek/ iletişim bilgilerinden ulaşabilirsiniz..
 
