@@ -1,27 +1,44 @@
+## TP-Link TD-W9970v3(Turk Telekom)
+
+![Untitled](https://github.com/onerc/reverse-engineering/assets/94126150/ca60d1ff-e409-41d1-b959-96d281586d6d)
+
 A modem of many faces
 
 ## Ambiguity
 
-Turk Telekom says this modem has model number W9970v3 (can still be seen in the [manual](https://www.turktelekom.com.tr/Documents/TP-Link-TD-W9970_kullanim_kilavuzu.pdf)), but in reality that model number belongs to [another modem](https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w9970/v3/
+According to Turk Telekom, this modem has model number W9970v3 (can still be seen in the [manual](https://www.turktelekom.com.tr/Documents/TP-Link-TD-W9970_kullanim_kilavuzu.pdf)), but in reality that model number belongs to [another modem](https://www.tp-link.com/en/home-networking/dsl-modem-router/td-w9970/v3/
 ).
 
 Even the internals look different. Not sure why they chose the name of an existing model.
 
-I guess TP-Link got so many questions/complaints about the _fake_ W9970v3 that they added an additional information to the [Turkish page](https://www.tp-link.com/tr/home-networking/dsl-modem-router/td-w9970/v3/) regarding the situation.
+I guess TP-Link got so many questions/complaints about the _fake_ W9970v3 that they added additional information to the [Turkish page](https://www.tp-link.com/tr/home-networking/dsl-modem-router/td-w9970/v3/) regarding the situation.
 
 >Önemli Bilgi ; Türk Telekom tarafından internet başvurusu dahilinde verilen TD-W9970V3 model ürün ile Web sitemizde yer alan TD-W9970 V3 modelleri birbirlerinden farklıdır. Türk Telekom tarafından verilen TD-W9970V3 modelin yazılım ve servis hizmetleri Sentim Bilişim firması tarafından sağlanmaktadır. İlgili firmaya http://www.sentim.com.tr/iletisim-destek/modem-destek/ iletişim bilgilerinden ulaşabilirsiniz..
 
 In English:
 >Important information ; The TD-W9970V3 model product provided by Türk Telekom within the internet application and the TD-W9970 V3 models on our website are different from each other. The software and services of the TD-W9970V3 model supplied by Türk Telekom are provided by Sentim Bilişim. You can reach the relevant company from the contact information http://www.sentim.com.tr/iletisim-destek/modem-destek/.
 
-I had two subjects, one was running firmware version ```17.12.27.01005```, the other one was running version ```20.05.16.01006```. Curiosity killed the old one.
-
-
 ## Internals
 ![20201005_171827](https://github.com/onerc/reverse-engineering/assets/94126150/595b7814-f728-472a-b694-fc5c8778d548)
 
 ## Pinout
 ![UART](https://github.com/onerc/reverse-engineering/assets/94126150/b72547cf-0acd-4b82-9bc5-c84babe3b4fc)
+
+## Dump
+I had two subjects, one was running firmware version ```17.12.27.01005```, the other one was running version ```20.05.16.01006```. Curiosity killed the old one.
+
+Dumping via CFE bootloader took ~7 hours. Folks at [@exploiteers](https://github.com/exploiteers)(big thanks!) trimmed/rebuilt the dump.
+
+
+```
+↪ binwalk TD-W9970.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+131072        0x20000         JFFS2 filesystem, big endian
+61866000      0x3B00010       XML document, version: "1.0"
+62914576      0x3C00010       XML document, version: "1.0"
+```
 
 
 ## Boot log
